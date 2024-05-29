@@ -1,0 +1,153 @@
+@import "../../../Shared_Style/variables.scss";
+
+.features {
+  @extend %shared-padding;
+  // background-color: $section-background;
+  .container {
+    @extend %grid;
+    .box {
+      text-align: center;
+      border: 1px solid #ccc;
+      .img-holder {
+        position: relative;
+        overflow: hidden;
+        img {
+          max-width: 100%;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: -1px;
+          width: 200%;
+          height: 200%;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          border-color: transparent transparent white transparent;
+          z-index: 6544;
+          border-width: 0px 0px 170px 500px;
+          border-style: solid;
+          transition: $main-transition;
+        }
+        &:hover::before {
+          //لو سبتها كده هيظهر الصوره كامله ف عادي اوبشن حلو
+          // border-width: 170px 500px 0px 0px;
+          //الاتجاه الاخرر
+          border-width: 170px 500px 250px 0px;
+        }
+      }
+      h2 {
+        position: relative;
+        font-size: 40px;
+        margin: auto;
+        width: fit-content;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -20px;
+          left: 15px;
+          width: calc(100% - 30px);
+          height: 5px;
+        }
+      }
+      p {
+        color: #777;
+        padding: 25px;
+        font-size: 20px;
+        margin: 30px 0;
+        line-height: 2;
+      }
+      a {
+        display: block;
+        border-radius: 4px;
+        padding: 10px 30px;
+        border: 2px solid red;
+        background-color: transparent;
+        width: fit-content;
+        margin: 0 auto 30px;
+        font-weight: bold;
+        font-size: 22px;
+        transition: $main-transition;
+        border-radius: 6px;
+      }
+
+      // تعريف الـ mixin لتطبيق الأنماط
+      @mixin style-box($color, $rgb-color) {
+        .img-holder::after {
+          content: "";
+          background-color: $rgb-color;
+        }
+        h2::after {
+          content: "";
+          background-color: $color;
+        }
+        a {
+          color: $color;
+          border-color: $color;
+          background: linear-gradient(to right, $color 50%, white 50%);
+          background-size: 200% 100%;
+          background-position: right bottom;
+          transition: background-position $main-transition,
+            color $main-transition;
+        }
+        &:hover {
+          a {
+            background-position: left bottom;
+            color: white;
+          }
+          .img-holder::before {
+            border-width: 170px 500px 250px 0px;
+          }
+        }
+      }
+
+      // تطبيق الـ mixin على كل صنف مع تمرير الألوان المناسبة
+      &.quality {
+        @include style-box(#f44036, rgba(244, 64, 56, 0.6));
+      }
+
+      &.time {
+        @include style-box(#009688, rgba(0, 150, 136, 0.6));
+      }
+
+      &.passion {
+        @include style-box(#03a9f4, rgba(3, 169, 244, 0.6));
+      }
+
+      // ##############################
+    }
+  }
+}
+
+// text-align: center does not work with fitcontet so you have to use margin:auto;
+// fitcontet  uses with  margin:auto;
+
+//عمل بوردر من غير أفتر
+//h2{
+// font-weight: bold;
+// font-size: 24px;
+// margin: 10px auto;
+// width: fit-content;
+// border-bottom: 2px solid red;
+// letter-spacing: 1px;
+//}
+//عمل بوردر ناقص الحجم من تحت
+//        position: relative;
+// font-size: 40px;
+// margin: auto;
+// width: fit-content;
+// &::after {
+//   //zero does
+//   content: "";
+//   position: absolute;
+//   bottom: -20px;
+//   left: 15px;
+//   width: calc(100% - 30px);
+//   height: 5px;
+//   background-color: red;
+// }

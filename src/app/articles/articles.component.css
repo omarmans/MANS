@@ -1,0 +1,64 @@
+.article {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.article .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.article {
+  position: relative;
+}
+.article .container .box {
+  border-radius: 6px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: white;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+.article .container .box:hover {
+  transform: translateY(-10px);
+}
+.article .container .box img {
+  max-width: 100%;
+}
+.article .container .box .content {
+  padding: 20px;
+}
+.article .container .box .content h3 {
+  margin: 0;
+}
+.article .container .box .content p {
+  margin: 10px 0 0;
+  line-height: 1.7;
+  color: #777;
+}
+.article .container .box .info {
+  padding: 20px;
+  border: 1px solid #e6e6e7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.article .container .box .info a {
+  cursor: pointer;
+  color: #2196f3;
+  font-weight: bold;
+}
+.article .container .box .info i {
+  color: #2196f3;
+}
+.article .container .box:hover i {
+  animation: Moving 0.5s linear infinite;
+}
+
+@keyframes Moving {
+  100% {
+    transform: translateX(10px);
+  }
+}/*# sourceMappingURL=articles.component.css.map */

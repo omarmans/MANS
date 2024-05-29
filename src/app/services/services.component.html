@@ -1,0 +1,12 @@
+<div class="services" id="services">
+  <app-spikes></app-spikes>
+  <app-main-title [Title]="title"></app-main-title>
+  <div class="container">
+    <div class="box" *ngFor="let serv of SERV">
+      <i [ngClass]="serv.icon"></i>
+      <p>{{ serv.service }}</p>
+      <h3>0{{ serv.number }}</h3>
+      <a href="#">Details</a>
+    </div>
+  </div>
+</div>

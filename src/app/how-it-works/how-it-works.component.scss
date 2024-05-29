@@ -1,0 +1,87 @@
+@import "../../../Shared_Style/variables.scss";
+
+.work-steps {
+  @extend %shared-padding;
+  background-color: $section-background;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    .imge {
+      max-width: 30%;
+      margin-right: 100px;
+    }
+    .steps {
+      .step {
+        display: flex;
+        align-items: center;
+        border: 2px solid white;
+        position: relative;
+        padding: 30px;
+        margin-bottom: 20px;
+        background-color: #f6f5f5;
+        border-radius: 6px;
+        position: relative;
+        transition: $main-transition;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: #ededed;
+          width: 0;
+          height: 0;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+          transition: $main-transition;
+        }
+        &:hover {
+          &::before {
+            width: 100%;
+            height: 100%;
+          }
+          h3 {
+            color: $main-color;
+          }
+        }
+
+        img {
+          max-width: 64px;
+          //     max-width: 70px;
+          margin-right: 20px;
+        }
+
+        h3 {
+          transition: $main-transition;
+          font-size: 22px;
+          margin: 0;
+        }
+        p {
+          line-height: 1.6;
+          color: #777;
+          margin: 10px 0 0;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .container {
+    flex-direction: column;
+    .imge {
+      margin: 20px auto;
+    }
+    .step {
+      img {
+        margin-bottom: 5px;
+      }
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  }
+}

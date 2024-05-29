@@ -1,0 +1,31 @@
+<div class="video" id="video">
+  <app-main-title [Title]="title"></app-main-title>
+  <div class="container">
+    <div class="holder">
+      <div class="list">
+        <div class="name">
+          Top Videos
+
+          <i class="fa-solid fa-video"></i>
+        </div>
+        <ul>
+          <li
+            *ngFor="let vid of Videos; let i = index"
+            (click)="throw_title(vid)"
+          >
+            {{ vid.title | uppercase }}<span>{{ vid.duration }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="preview">
+        <video id="myVideo" muted controls *ngIf="currentVideo">
+          <source [src]="currentVideo.src" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="info">{{ currentVideo.title | uppercase }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- [src]="'../../assets/Images/vid/' + currentVideo.title" -->

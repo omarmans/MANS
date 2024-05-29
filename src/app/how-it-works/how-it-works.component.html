@@ -1,0 +1,16 @@
+<div class="work-steps" id="work-steps">
+  <app-spikes></app-spikes>
+  <app-main-title [Title]="title"></app-main-title>
+  <div class="container">
+    <img src="assets/Images/work_steps/work-steps.png" alt="" class="imge" />
+    <div class="steps">
+      <div class="step" *ngFor="let step of Steps">
+        <img [src]="'assets/Images/work_steps/' + step.img" alt="" />
+        <div class="info">
+          <h3>{{ step.step }}</h3>
+          <p>{{ step.p }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,100 @@
+@import "../../../Shared_Style/variables.scss";
+// $wid: calc(100% - 60px);
+
+.services {
+  @extend %shared-padding;
+  background-color: $section-background;
+  .container {
+    @extend %grid;
+
+    .box {
+      transition: $main-transition;
+      padding: 60px 0;
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+      animation: go-up 0.5s infinite linear;
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: $main-color;
+        width: 30%;
+        height: 2px;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: $main-transition;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 64px;
+        transform: skew(-30deg);
+        bottom: -1px;
+        height: 50px;
+        width: 70px;
+        background-color: #d5d5d5;
+      }
+      &:hover {
+        transition: $section-background;
+        // transform: translateY(-15px) scale(1.1);
+        transform: translateY(-15px);
+        cursor: pointer;
+        &::before {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+      p {
+        line-height: 1.7;
+        color: $main-color;
+        font-size: 25px;
+      }
+      i {
+        margin: 30px auto 20px;
+        display: block;
+        text-align: center;
+        color: #d5d5d5;
+      }
+      h3 {
+        position: absolute;
+        background-color: $main-color;
+        padding: 10px 20px;
+        margin: 0;
+        left: 0;
+        bottom: -1px;
+        height: 50px;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+      }
+      a {
+        display: flex;
+        position: absolute;
+        right: 15px;
+        padding: 10px 15px;
+        bottom: 0;
+        color: $main-color;
+      }
+    }
+  }
+}
+// @keyframes go-up {
+//   0%,
+//   50%,
+//   60% {
+//     transform: translateY(-10px);
+//   }
+//   40%,
+//   100% {
+//     transform: translateY(-20px);
+//   }
+// }

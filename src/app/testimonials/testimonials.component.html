@@ -1,0 +1,21 @@
+<div class="testimonials" id="testimonials">
+  <app-spikes></app-spikes>
+  <app-main-title [Title]="title"></app-main-title>
+  <div class="container">
+    <div class="box" *ngFor="let comment of comments">
+      <img [src]="'assets/Images/Avatar/' + comment.img" alt="" />
+      <h3>{{ comment.h3 }}</h3>
+      <span class="title">{{ comment.Title }}</span>
+      <div class="rate">
+        <ng-container *ngFor="let i of [1, 2, 3, 4, 5]; let index = index">
+          <i
+            [ngClass]="
+              index < comment.stars ? 'fas fa-star filled' : 'far fa-star'
+            "
+          ></i>
+        </ng-container>
+      </div>
+      <p>{{ comment.p }}</p>
+    </div>
+  </div>
+</div>

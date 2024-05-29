@@ -1,0 +1,23 @@
+<div class="team-meamber" id="team">
+  <app-main-title
+    Title="TEAM MEMBERS
+"
+  ></app-main-title>
+  <div class="container">
+    <div class="box" *ngFor="let team of TEAMS">
+      <div class="data">
+        <img [src]="'assets/Images/team/' + team.img" alt="" />
+        <div class="social">
+          <a href="#"><i [ngClass]="team.i.facebook"></i></a>
+          <a href="#"><i [ngClass]="team.i.linkedin"></i></a>
+          <a href="#"><i [ngClass]="team.i.youtube"></i></a>
+          <a href="#"><i [ngClass]="team.i.website"></i></a>
+        </div>
+      </div>
+      <div class="info">
+        <h3>{{ team.name }}</h3>
+        <p>{{ team.p }}</p>
+      </div>
+    </div>
+  </div>
+</div>

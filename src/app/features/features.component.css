@@ -1,0 +1,150 @@
+.features {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.features .container .box {
+  text-align: center;
+  border: 1px solid #ccc;
+}
+.features .container .box .img-holder {
+  position: relative;
+  overflow: hidden;
+}
+.features .container .box .img-holder img {
+  max-width: 100%;
+}
+.features .container .box .img-holder::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 200%;
+  height: 200%;
+}
+.features .container .box .img-holder::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-color: transparent transparent white transparent;
+  z-index: 6544;
+  border-width: 0px 0px 170px 500px;
+  border-style: solid;
+  transition: 0.5s;
+}
+.features .container .box .img-holder:hover::before {
+  border-width: 170px 500px 250px 0px;
+}
+.features .container .box h2 {
+  position: relative;
+  font-size: 40px;
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.features .container .box h2::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 15px;
+  width: calc(100% - 30px);
+  height: 5px;
+}
+.features .container .box p {
+  color: #777;
+  padding: 25px;
+  font-size: 20px;
+  margin: 30px 0;
+  line-height: 2;
+}
+.features .container .box a {
+  display: block;
+  border-radius: 4px;
+  padding: 10px 30px;
+  border: 2px solid red;
+  background-color: transparent;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 30px;
+  font-weight: bold;
+  font-size: 22px;
+  transition: 0.5s;
+  border-radius: 6px;
+}
+.features .container .box.quality .img-holder::after {
+  content: "";
+  background-color: rgba(244, 64, 56, 0.6);
+}
+.features .container .box.quality h2::after {
+  content: "";
+  background-color: #f44036;
+}
+.features .container .box.quality a {
+  color: #f44036;
+  border-color: #f44036;
+  background: linear-gradient(to right, #f44036 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s, color 0.5s;
+}
+.features .container .box.quality:hover a {
+  background-position: left bottom;
+  color: white;
+}
+.features .container .box.quality:hover .img-holder::before {
+  border-width: 170px 500px 250px 0px;
+}
+.features .container .box.time .img-holder::after {
+  content: "";
+  background-color: rgba(0, 150, 136, 0.6);
+}
+.features .container .box.time h2::after {
+  content: "";
+  background-color: #009688;
+}
+.features .container .box.time a {
+  color: #009688;
+  border-color: #009688;
+  background: linear-gradient(to right, #009688 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s, color 0.5s;
+}
+.features .container .box.time:hover a {
+  background-position: left bottom;
+  color: white;
+}
+.features .container .box.time:hover .img-holder::before {
+  border-width: 170px 500px 250px 0px;
+}
+.features .container .box.passion .img-holder::after {
+  content: "";
+  background-color: rgba(3, 169, 244, 0.6);
+}
+.features .container .box.passion h2::after {
+  content: "";
+  background-color: #03a9f4;
+}
+.features .container .box.passion a {
+  color: #03a9f4;
+  border-color: #03a9f4;
+  background: linear-gradient(to right, #03a9f4 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s, color 0.5s;
+}
+.features .container .box.passion:hover a {
+  background-position: left bottom;
+  color: white;
+}
+.features .container .box.passion:hover .img-holder::before {
+  border-width: 170px 500px 250px 0px;
+}/*# sourceMappingURL=features.component.css.map */

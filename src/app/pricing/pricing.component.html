@@ -1,0 +1,19 @@
+<div class="pricing" id="pricing">
+  <app-spikes></app-spikes>
+  <app-dots></app-dots>
+  <app-main-title [Title]="title"></app-main-title>
+  <div class="container">
+    <div class="box" *ngFor="let price of Prices; let i = index">
+      <h3 class="title">{{ price.name }}</h3>
+      <img [src]="'assets/Images/pricing/' + price.i" alt="" />
+      <div class="price">
+        <span>{{ price.price }}</span>
+        <span>{{ [price.Duration] }}</span>
+      </div>
+      <ul class="feat" *ngFor="let Feature of price.Features">
+        <li><i class="fa-solid fa-check"></i>{{ Feature }}</li>
+      </ul>
+      <a href="#">Choose Plan</a>
+    </div>
+  </div>
+</div>

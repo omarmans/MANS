@@ -1,0 +1,15 @@
+.spikes {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -100px;
+    width: 100%;
+    height: 30px;
+
+    background-image: linear-gradient(135deg, white 25%, transpaernt 25%),
+      linear-gradient(225deg, white 25%, transpaernt 25%);
+    background-size: 40px 50px;
+  }
+}

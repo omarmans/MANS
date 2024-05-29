@@ -1,0 +1,53 @@
+.our-skills {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.our-skills .container {
+  display: flex;
+  align-items: center;
+}
+.our-skills .container .skills {
+  flex: 1;
+}
+.our-skills .container .skills .skill {
+  transition: 5s;
+}
+.our-skills .container .skills .skill h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.our-skills .container .skills .skill span {
+  font-size: 12px;
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+  border-radius: 4px;
+  color: #2196f3;
+}
+.our-skills .container .skills .skill .the-progress {
+  height: 30px;
+  background-color: #eee;
+  position: relative;
+}
+.our-skills .container .skills .skill .the-progress span {
+  transition: width 2s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #2196f3;
+}
+
+.test {
+  height: 500px;
+  width: 100vh;
+  padding: 100px;
+}
+
+@media (max-width: 991px) {
+  img {
+    display: none;
+  }
+}/*# sourceMappingURL=skill.component.css.map */

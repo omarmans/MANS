@@ -1,0 +1,21 @@
+<div class="our-skills" id="our-skills" #skill_sec>
+  <app-main-title [Title]="title"></app-main-title>
+  <div class="container">
+    <img src="assets/Images/Skills/skills.png" alt="" />
+
+    <div class="skills">
+      <div class="skill" *ngFor="let sk of Skills">
+        <h3>
+          {{ sk.skill }}
+
+          <span>{{ sk.width }}%</span>
+        </h3>
+        <div class="the-progress">
+          <span
+            [ngStyle]="{ width: grow_smozzy ? sk.width + '%' : '0%' }"
+          ></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

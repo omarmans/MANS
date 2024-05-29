@@ -1,0 +1,14 @@
+<div class="Statistics" #number id="stats">
+  <app-spikes></app-spikes>
+  <h2>Our Awesome Stats</h2>
+  <div class="container">
+    <div class="box" *ngFor="let box of Statistics">
+      <i class="{{ box.i }}"></i>
+      <div class="number">
+        {{ grow_smozzy ? box.number : 0 }}
+      </div>
+
+      <p>{{ box.p }}</p>
+    </div>
+  </div>
+</div>

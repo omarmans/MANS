@@ -1,0 +1,78 @@
+.Statistics {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.Statistics .container .box, .Statistics .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Statistics {
+  background-color: #ececec;
+  position: relative;
+}
+.Statistics h2 {
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 40px;
+  margin: 0 auto 40px;
+}
+.Statistics .container {
+  gap: 20px;
+}
+.Statistics .container .box {
+  cursor: pointer;
+  flex-direction: column;
+  padding: 60px;
+  text-align: center;
+  opacity: 0.8;
+  background-color: white;
+  transition: 0.5s;
+  position: relative;
+}
+.Statistics .container .box::before, .Statistics .container .box::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: #2196f3;
+  transition: 1s;
+}
+.Statistics .container .box::before {
+  top: 0;
+  right: 0;
+}
+.Statistics .container .box::after {
+  bottom: 0;
+  left: 0;
+}
+.Statistics .container .box:hover {
+  transform: translateY(-10px);
+}
+.Statistics .container .box:hover::before, .Statistics .container .box:hover::after {
+  height: 100%;
+}
+.Statistics .container .box i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.Statistics .container .box .number {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+}
+.Statistics .container .box p {
+  color: #2196f3;
+  font-style: italic;
+  font-size: 30px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=stat.component.css.map */

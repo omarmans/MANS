@@ -1,0 +1,92 @@
+.services {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.services {
+  background-color: #ececec;
+}
+.services .container .box {
+  transition: 0.5s;
+  padding: 60px 0;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.13), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  animation: go-up 0.5s infinite linear;
+}
+.services .container .box::before {
+  content: "";
+  position: absolute;
+  background-color: #2196f3;
+  width: 30%;
+  height: 2px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+.services .container .box::after {
+  content: "";
+  position: absolute;
+  left: 64px;
+  transform: skew(-30deg);
+  bottom: -1px;
+  height: 50px;
+  width: 70px;
+  background-color: #d5d5d5;
+}
+.services .container .box:hover {
+  transition: #ececec;
+  transform: translateY(-15px);
+  cursor: pointer;
+}
+.services .container .box:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+.services .container .box p {
+  line-height: 1.7;
+  color: #2196f3;
+  font-size: 25px;
+}
+.services .container .box i {
+  margin: 30px auto 20px;
+  display: block;
+  text-align: center;
+  color: #d5d5d5;
+}
+.services .container .box h3 {
+  position: absolute;
+  background-color: #2196f3;
+  padding: 10px 20px;
+  margin: 0;
+  left: 0;
+  bottom: -1px;
+  height: 50px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+.services .container .box a {
+  display: flex;
+  position: absolute;
+  right: 15px;
+  padding: 10px 15px;
+  bottom: 0;
+  color: #2196f3;
+}/*# sourceMappingURL=services.component.css.map */

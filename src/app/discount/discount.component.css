@@ -1,0 +1,98 @@
+.discount {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.discount .image {
+  background-image: url("../../assets/Images/Discount/discount-background1.jpg");
+  background-size: cover;
+  color: white;
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  animation: ChangeBackGround 10s linear infinite;
+}
+.discount .image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 135, 224, 0.97);
+  z-index: -1;
+}
+.discount .image .content img {
+  width: 300px;
+  max-width: 100%;
+}
+.discount .form {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.discount .form .input {
+  outline: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 15px;
+  border: none;
+  border: 1px solid #2196f3;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  caret-color: #2196f3;
+  transition: 0.2s;
+}
+.discount .form textarea.input {
+  resize: none;
+  height: 200px;
+}
+.discount .form .submit {
+  display: block;
+  margin: auto;
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #81b1d8;
+  color: white;
+  border: 1px solid #2196f3;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.discount .form .submit:hover {
+  background-color: #2196f3;
+  letter-spacing: 5px;
+}
+.discount .content {
+  text-align: center;
+  padding: 0 20px;
+}
+.discount .content h2 {
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+.discount .content p {
+  line-height: 1.6;
+  max-width: 500px;
+  font-size: 18px;
+}
+
+@media (max-width: 991px) {
+  .image {
+    flex-basis: 100%;
+  }
+}
+@keyframes ChangeBackGround {
+  0%, 100% {
+    background-image: url("../../assets/Images/Discount/discount-background1.jpg");
+  }
+  50% {
+    background-image: url("../../assets/Images/Discount/discount.png");
+  }
+}/*# sourceMappingURL=discount.component.css.map */

@@ -1,0 +1,15 @@
+<div class="features" id="Features">
+  <app-main-title [Title]="title"></app-main-title>
+  <div class="container">
+    <div *ngFor="let box of Features" class="{{ box.class }}">
+      <div class="img-holder">
+        <img [src]="'assets/Images/Feat/' + box.img" alt="" />
+      </div>
+      <h2>{{ box.h2 | uppercase }}</h2>
+      <p>{{ box.p }}</p>
+      <a href="#">More</a>
+    </div>
+  </div>
+</div>
+
+<!-- <div [ngClass]="box.class"> -->

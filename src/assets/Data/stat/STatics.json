@@ -1,0 +1,22 @@
+[
+  {
+    "i": "far fa-user fa-2x fa-fw",
+    "number": 150,
+    "p": "Clients"
+  },
+  {
+    "i": "fas fa-code fa-2x fa-fw",
+    "number": 135,
+    "p": "Projects"
+  },
+  {
+    "i": "fas fa-globe-asia fa-2x fa-fw",
+    "number": 50,
+    "p": "Countries"
+  },
+  {
+    "i": "far fa-money-bill-alt fa-2x fa-fw",
+    "number": 500,
+    "p": "Money"
+  }
+]

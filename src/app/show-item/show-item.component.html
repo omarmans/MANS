@@ -1,0 +1,10 @@
+<div class="item">
+  <div *ngIf="article" class="box">
+    <button (click)="close()">
+      <i class="fa-solid fa-x"></i>
+    </button>
+    <img [src]="'assets/Images/cat/' + article.img" alt="Article Image" />
+    <h2>{{ article.h3 | uppercase }}</h2>
+    <p>{{ article.p }}</p>
+  </div>
+</div>

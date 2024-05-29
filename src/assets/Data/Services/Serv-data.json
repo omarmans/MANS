@@ -1,0 +1,32 @@
+[
+  {
+    "service": "Security",
+    "icon": "fas fa-user-shield fa-4x",
+    "number": 1
+  },
+  {
+    "service": "Fixing Issues",
+    "icon": "fas fa-tools fa-4x",
+    "number": 2
+  },
+  {
+    "service": "Location",
+    "icon": "fas fa-map-marked-alt fa-4x",
+    "number": 3
+  },
+  {
+    "service": "Coding",
+    "icon": "fas fa-laptop-code fa-4x",
+    "number": 4
+  },
+  {
+    "service": "Design",
+    "icon": "fas fa-palette fa-4x",
+    "number": 5
+  },
+  {
+    "service": "Marketing",
+    "icon": "fas fa-bullhorn fa-4x",
+    "number": 6
+  }
+]

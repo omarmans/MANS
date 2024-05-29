@@ -1,0 +1,53 @@
+<div class="footer" id="footer">
+  <div class="container">
+    <div class="info">
+      <h3>{{ "mans" | uppercase }}</h3>
+      <div class="social">
+        <a
+          *ngFor="let soc_lin of footers?.social_links"
+          href="#"
+          [ngClass]="soc_lin.class"
+          ><i [ngClass]="soc_lin.i"></i
+        ></a>
+      </div>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus
+        nulla rem, dignissimos iste aspernatur
+      </p>
+    </div>
+    <div class="link-container">
+      <ul class="links">
+        <li href="#" *ngFor="let link of footers?.links">
+          <a><i class="fas fa-angle-double-right"></i>{{ link }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="location">
+      <div class="line">
+        <i class="fa-solid fa-location-dot fa-fade"></i>
+        <div class="line-info">
+          Egypt, Giza, Inside The Sphinx, Room Number 220
+        </div>
+      </div>
+      <div class="line">
+        <i class="fa-solid fa-clock fa-spin"></i>
+        <div class="line-info">Business Hours: From 10:00 To 18:00</div>
+      </div>
+      <div class="line">
+        <i class="fa-solid fa-phone fa-shake"></i>
+        <div class="line-info">
+          <span>+20123456789</span>
+          <span>+20123456789</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gallery-img">
+    <img
+      *ngFor="let img of footers?.gallery_images"
+      [src]="'assets/Images/Gallery/' + img"
+      alt=""
+    />
+  </div>
+  <p class="copyright">Made With Love By Mans</p>
+</div>

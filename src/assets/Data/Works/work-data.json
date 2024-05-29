@@ -1,0 +1,17 @@
+[
+  {
+    "step": "Business Analysis",
+    "p": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel",
+    "img": "work-steps-1.png"
+  },
+  {
+    "step": "Architecture",
+    "p": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel",
+    "img": "work-steps-2.png"
+  },
+  {
+    "step": "Developement",
+    "p": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum recusandae debitis vel",
+    "img": "work-steps-3.png"
+  }
+]

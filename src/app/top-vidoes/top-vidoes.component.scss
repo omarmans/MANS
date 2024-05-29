@@ -1,0 +1,74 @@
+@import "../../../Shared_Style/variables.scss";
+// $wid: calc(100% - 60px);
+
+.video {
+  @extend %shared-padding;
+  .container {
+    .holder {
+      justify-content: center;
+      display: flex;
+      background-color: $section-background;
+      border: 1px solid #ddd;
+      .list {
+        min-width: 300px;
+        background-color: white;
+        .name {
+          display: flex;
+          justify-content: space-between;
+          padding: 20px;
+          font-weight: bold;
+          color: $main-color;
+          background-color: #f4f4f4;
+        }
+        ul {
+          overflow: hidden;
+          li {
+            padding: 15px;
+            border-top: 1px solid $section-background;
+            cursor: pointer;
+            transition: $main-transition;
+            span {
+              display: block;
+              margin-top: 10px;
+              color: #777;
+            }
+            &:hover {
+              background-color: #fafafa;
+              color: $main-color;
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      .preview {
+        flex: 1;
+        background-color: #e2e2e2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px;
+
+        video {
+          height: 100%;
+          width: 100%;
+        }
+        .info {
+          padding: 20px;
+          margin-top: 10px;
+          background-color: white;
+          font-weight: bold;
+          font-size: 25px;
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .holder {
+    flex-direction: column;
+  }
+}
+
+//holder عشان الباك جروند هتخش ع الباك جرواند الاساسيه

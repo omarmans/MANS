@@ -1,0 +1,56 @@
+.gallery {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.gallery .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.gallery {
+  position: relative;
+  background-color: #ececec;
+}
+.gallery .container .box {
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 12px 20px 0px rgba(0, 0, 0, 0.13), 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+}
+.gallery .container .box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0px;
+  width: 0px;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  z-index: 2;
+}
+.gallery .container .box img {
+  max-width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+.gallery .container .box:hover img {
+  transform: rotate(6deg) scale(1.1);
+}
+.gallery .container .box:hover::before {
+  animation: flashing 0.7s;
+}
+
+@keyframes flashing {
+  0%, 40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}/*# sourceMappingURL=gallery.component.css.map */

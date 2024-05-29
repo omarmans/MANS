@@ -1,0 +1,58 @@
+@import "../../../Shared_Style/variables.scss";
+$main-padd: 20px;
+
+.item {
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 14894984984;
+  .box {
+    border-radius: 10px;
+    //     color: $main-color;
+    color: white;
+    overflow: hidden;
+    background-color: #777;
+    transition: transform $main-transition, box-shadow $main-transition;
+    &:hover {
+      img {
+        filter: grayscale(100%);
+      }
+    }
+    img {
+      max-width: 100%;
+      transition: $main-transition;
+    }
+    .content {
+      padding: $main-padd;
+      h3 {
+        margin: 0;
+      }
+      p {
+        margin: 10px 0 0;
+        line-height: 2;
+        color: #777;
+        letter-spacing: 3px;
+      }
+    }
+    button {
+      position: absolute;
+      right: -10px;
+      top: -12px;
+      z-index: 46854;
+      padding: 10px;
+      width: 33px;
+      color: #2196f3;
+      border-radius: 10px;
+      outline: none;
+      text-align: center;
+      border: none;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .item {
+    display: none;
+  }
+}

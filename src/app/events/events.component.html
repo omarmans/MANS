@@ -1,0 +1,32 @@
+<div class="events" id="events">
+  <app-dots></app-dots>
+  <app-main-title [Title]="title"></app-main-title>
+  <div class="container">
+    <img src="assets/Images/events/events.png" alt="" class="main-img" />
+    <div class="info">
+      <div class="time">
+        <div [ngClass]="unit.class" *ngFor="let unit of Units">
+          <span>{{ unit.num }}</span>
+          <span>{{ unit.Time }}</span>
+        </div>
+      </div>
+      <h2 class="title">Tech Masters Event 2021</h2>
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero tenetur
+        doloremque iusto ut adipisci quam ratione aliquam excepturi nulla in
+        harum, veritatis porro
+      </p>
+    </div>
+    <div class="subscribe">
+      <form action="">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter Your Email"
+        />
+        <input id="submit" type="submit" value="Subscribe" />
+      </form>
+    </div>
+  </div>
+</div>

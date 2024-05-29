@@ -1,0 +1,6 @@
+@import "../../../Shared_Style/variables.scss";
+
+  @extend %shared-padding;
+
+
+  assets/Images/

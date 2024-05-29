@@ -1,0 +1,131 @@
+.events {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.events .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.events .container .main-img {
+  max-width: 450px;
+}
+.events .container .info {
+  flex: 1;
+}
+.events .container .info .time {
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  gap: 10px;
+  justify-content: center;
+}
+.events .container .info .time .unit {
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  text-align: center;
+  width: 75px;
+  transition: 0.5s;
+}
+.events .container .info .time .unit span {
+  display: block;
+  transition: 0.5s;
+}
+.events .container .info .time .unit span:first-child {
+  font-size: 35px;
+  padding: 15px;
+  color: #2196f3;
+  font-weight: bold;
+}
+.events .container .info .time .unit span:last-child {
+  padding: 8px 10px;
+  font-size: 13px;
+  border-top: 1px solid #d4d4d4;
+}
+.events .container .info .time .unit:hover {
+  border-color: #2196f3;
+}
+.events .container .info .time .unit:hover span:last-child {
+  border-color: #2196f3;
+}
+.events .container .info .title {
+  text-align: center;
+  margin: 40px 0 0;
+  font-size: 40px;
+}
+.events .container .info .description {
+  text-align: center;
+  line-height: 1.7;
+  font-size: 19px;
+  color: #777;
+}
+.events .container .subscribe {
+  width: 100%;
+  margin-top: 50px;
+}
+.events .container .subscribe form {
+  width: 600px;
+  margin: 20px auto;
+  padding: 30px 60px;
+  background-color: #f6f5f5;
+  border-radius: 50px;
+  display: flex;
+  gap: 20px;
+}
+.events .container .subscribe form #email {
+  padding: 20px;
+  border-radius: 50px;
+  border: none;
+  flex: 1;
+  caret-color: #2196f3;
+}
+.events .container .subscribe form #email:focus {
+  outline: none;
+}
+.events .container .subscribe form #email:focus::-moz-placeholder {
+  opacity: 0;
+}
+.events .container .subscribe form #email:focus::placeholder {
+  opacity: 0;
+}
+.events .container .subscribe form #email::-moz-placeholder {
+  -moz-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.events .container .subscribe form #email::placeholder {
+  transition: opacity 0.5s;
+}
+.events .container .subscribe form #submit {
+  padding: 20px;
+  border-radius: 50px;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: bold;
+  background-color: #81b1d8;
+  color: white;
+}
+.events .container .subscribe form #submit:hover {
+  background-color: #2196f3;
+}
+
+@media (max-width: 991px) {
+  .container .main-img {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .container form {
+    max-width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    border-radius: 0;
+  }
+  .container #email,
+  .container #submit {
+    border-radius: 0;
+  }
+}/*# sourceMappingURL=events.component.css.map */

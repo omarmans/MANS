@@ -1,0 +1,92 @@
+.team-meamber {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.team-meamber .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.team-meamber .container .box {
+  cursor: pointer;
+  position: relative;
+}
+.team-meamber .container .box:hover img {
+  filter: grayscale(100%);
+}
+.team-meamber .container .box:hover .info h3 {
+  color: #777;
+}
+.team-meamber .container .box::before, .team-meamber .container .box::after {
+  content: "";
+  background-color: #ffebeb;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 10px;
+  height: 100%;
+  transition: 0.5s;
+}
+.team-meamber .container .box::before {
+  width: calc(100% - 60px);
+  z-index: -2;
+}
+.team-meamber .container .box::after {
+  z-index: -1;
+  width: 0;
+}
+.team-meamber .container .box:hover::after {
+  background-color: #e4e4e4;
+  opacity: 0.1;
+  width: calc(100% - 60px);
+  z-index: 1;
+}
+.team-meamber .container .box .data {
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+}
+.team-meamber .container .box .data img {
+  width: calc(100% - 60px);
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.team-meamber .container .box .data .social {
+  position: relative;
+  z-index: 14656;
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.team-meamber .container .box .data .social a {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  z-index: 14656547454;
+}
+.team-meamber .container .box .data .social a:hover i {
+  color: #2196f3;
+}
+.team-meamber .container .box .data .social a i {
+  color: #777;
+}
+.team-meamber .container .box .info {
+  padding-left: 80px;
+}
+.team-meamber .container .box .info h3 {
+  margin-bottom: 0;
+  color: #2196f3;
+  font-size: 22px;
+  transition: 0.5s;
+}
+.team-meamber .container .box .info p {
+  margin: 10px 25px;
+}/*# sourceMappingURL=team-meamber.component.css.map */

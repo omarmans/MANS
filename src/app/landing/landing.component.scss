@@ -1,0 +1,108 @@
+@import "../../../Shared_Style/variables.scss";
+
+.landing {
+  position: relative;
+  &::before {
+    //overlay
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ececec;
+    z-index: -1;
+    transform: skewY(-6deg);
+
+    transform-origin: top left;
+  }
+  .container {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
+    .text {
+      flex: 1;
+      h1 {
+        font-size: 40px;
+        margin: 0;
+        letter-spacing: -2px;
+      }
+      p {
+        font-size: 24px;
+        line-height: 1.7;
+        margin: 5px 0 0;
+        color: #666;
+        max-width: 500px;
+      }
+    }
+    .image {
+      img {
+        position: relative; //must be pos to work anaime
+        width: 600px;
+        animation: up-and-down 5s linear infinite;
+      }
+    }
+  }
+  .go-down {
+    color: $main-color;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $main-color-alt;
+    transition: $main-transition;
+    &:hover {
+      color: $main-color;
+    }
+    i {
+      position: relative;
+      animation: bouncing 2s linear infinite;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .text {
+    text-align: center;
+  }
+  img {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .text {
+    h1 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
+
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}
+@keyframes bouncing {
+  0%,
+  10%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40%,
+  60% {
+    transform: translateY(-15px);
+  }
+}

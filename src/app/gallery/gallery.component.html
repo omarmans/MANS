@@ -1,0 +1,9 @@
+<div class="gallery">
+  <app-spikes></app-spikes>
+  <app-main-title [Title]="title"></app-main-title>
+  <div class="container">
+    <div class="box" *ngFor="let img of Imgs">
+      <img [src]="'assets/Images/Gallery/' + img" alt="" />
+    </div>
+  </div>
+</div>

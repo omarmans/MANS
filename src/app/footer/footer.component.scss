@@ -1,0 +1,136 @@
+@import "../../../Shared_Style/variables.scss";
+
+.footer {
+  @extend %shared-padding;
+  padding-bottom: 0;
+  background-color: #191919;
+  .container {
+    @extend %grid;
+
+    .info {
+      h3 {
+        margin: 0 0 20px;
+        font-size: 50px;
+        color: white;
+        font-weight: bold;
+      }
+      .social {
+        display: flex;
+        gap: 20px;
+        a {
+          display: block;
+          width: 100px;
+          background-color: #313131;
+          color: #b9b9b9;
+          text-align: center;
+          transition: $main-transition;
+          margin-top: 15px;
+          i {
+            width: 100%;
+            font-size: 30px;
+            padding: 10px;
+          }
+          &.face:hover {
+            background-color: #1877f2;
+          }
+          &.twitter:hover {
+            background-color: #1da1f2;
+          }
+          &.youtube:hover {
+            background-color: #ff0000;
+          }
+        }
+      }
+      p {
+        margin-top: 15px;
+        color: #777;
+
+        line-height: 2;
+        //   max-width: 300px;
+      }
+    }
+
+    .links {
+      text-align: left;
+      li {
+        &:last-child {
+          border: none;
+        }
+        padding: 15px 0;
+        border-bottom: 1px solid #444;
+        transition: 0.2s;
+        &:hover {
+          padding-left: 10px;
+        }
+        a {
+          color: #b9b9b9;
+          display: block;
+          width: 100%;
+          font-size: 15px;
+          i {
+            font-weight: bold;
+            margin-right: 10px;
+            color: $main-color;
+          }
+        }
+      }
+    }
+    .location {
+      .line {
+        display: flex;
+        align-items: center;
+        color: #b9b9b9;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        i {
+          margin-right: 10px;
+          margin-bottom: 15px;
+          font-weight: bold;
+          font-size: 25px;
+          color: $main-color;
+        }
+        .line-info {
+          //اتحكم ف طول الكلام مع الايكونه عن طريقه
+          letter-spacing: 1.8;
+          flex: 1;
+          span {
+            display: block;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.gallery-img {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.5s;
+  img {
+    width: 78px;
+    border: 3px solid white;
+    margin: 2px;
+    max-height: 100%;
+    &:hover {
+      transform: scale(1.1) rotate(6deg);
+    }
+  }
+}
+.copyright {
+  background-color: #191919;
+  color: #b9b9b9;
+  text-align: center;
+  font-size: 30px;
+  border-top: 1px solid #444;
+  padding: 20px 0;
+  margin: 50px 0 0;
+}
+
+@media (max-width: 767px) {
+  .line {
+    flex-direction: column;
+    text-align: center;
+  }
+}

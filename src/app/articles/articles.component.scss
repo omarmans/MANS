@@ -1,0 +1,63 @@
+$main-padd: 20px;
+@import "../../../Shared_Style/variables.scss";
+.article {
+  @extend %shared-padding;
+  position: relative;
+  .container {
+    @extend %grid;
+    .box {
+      border-radius: 6px;
+      box-shadow: 0 2px 15px rgb(0 0 0 /10%);
+      overflow: hidden;
+      background-color: white;
+      transition: transform $main-transition, box-shadow $main-transition;
+      position: relative;
+      &:hover {
+        transform: translateY(-10px);
+      }
+      img {
+        max-width: 100%;
+      }
+      .content {
+        padding: $main-padd;
+        h3 {
+          margin: 0;
+        }
+        p {
+          margin: 10px 0 0;
+          line-height: 1.7;
+          color: #777;
+        }
+      }
+
+      .info {
+        padding: $main-padd;
+        border: 1px solid #e6e6e7;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        a {
+          cursor: pointer;
+          color: $main-color;
+          font-weight: bold;
+        }
+        i {
+          color: $main-color;
+        }
+      }
+      //hover on box to make arrow moveing
+      &:hover i {
+        animation: Moving 0.5s linear infinite;
+      }
+    }
+  }
+}
+@keyframes Moving {
+  100% {
+    transform: translateX(10px);
+
+    //كده مش هيوصل للنهاية
+    // transform: translateX(-10px);
+  }
+}

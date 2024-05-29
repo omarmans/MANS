@@ -1,0 +1,31 @@
+<div class="article" id="article">
+  <!-- الهيدر بيتتحط برا --_____-- -->
+
+  <app-main-title [Title]="title"></app-main-title>
+  <app-show-item
+    *ngIf="parent_show"
+    (closepopup)="parent_show = null"
+    [article]="parent_show"
+  ></app-show-item>
+  <div class="container">
+    <div
+      class="box"
+      *ngFor="let cat of CATS; let i = index"
+      (click)="parent_show = cat"
+    >
+      <img [src]="'assets/Images/cat/' + cat.img" alt="{{ cat.h3 }}" />
+
+      <div class="content">
+        <h3>{{ cat.h3 }}</h3>
+        <p>{{ cat.p }}</p>
+      </div>
+      <div class="info">
+        <a href="#">Read More</a>
+        <i class="{{ cat.i }}"></i>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  *ngIf="parent_show" تظهر لو فيها قيمه -->
+<!--    (closepopup)="parent_show = null" تختفي لو فاضيه  -->
+<!-- [article]="parent_show"هتاخد القيمه من اللوب ومن ثم تظهر -->

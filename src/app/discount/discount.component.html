@@ -1,0 +1,88 @@
+<div class="discount" id="discount">
+  <div class="image">
+    <div class="content">
+      <h2>We Have A Discount</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
+        asperiores consectetur, recusandae ratione provident necessitatibus,
+        cumque delectus commodi fuga praesentium beatae. Totam vel similique
+        laborum dicta aperiam odit doloribus corporis.
+      </p>
+      <img src="assets/Images/Discount/discount.png" alt="" />
+    </div>
+  </div>
+  <div class="formContainer">
+    <div class="content">
+      <h2>Request A Discount</h2>
+      <form [formGroup]="form">
+        <input
+          class="input"
+          type="text"
+          placeholder="Your Name"
+          name="name"
+          id="name"
+          formControlName="name"
+        />
+        <span
+          class="alert"
+          *ngIf="!form.get('name')?.valid && form.get('name')?.touched"
+          >plz enter name</span
+        >
+        <input
+          class="input"
+          type="email"
+          placeholder="Your Email"
+          name="email"
+          formControlName="email"
+        />
+        <span
+          class="alert"
+          *ngIf="!form.get('email')?.valid && form.get('email')?.touched"
+          >plz enter email</span
+        >
+        <input
+          class="input"
+          type="password"
+          placeholder="Your password"
+          name="password"
+          formControlName="password"
+        />
+        <span
+          class="alert"
+          *ngIf="!form.get('password')?.valid && form.get('password')?.touched"
+          >plz enter password</span
+        >
+        <input
+          class="input"
+          type="tel"
+          placeholder="Your Phone"
+          name="mobile"
+          formControlName="mobile"
+        />
+        <span
+          class="alert"
+          *ngIf="!form.get('mobile')?.valid && form.get('mobile')?.touched"
+          >plz enter mobile</span
+        >
+        <textarea
+          class="input"
+          placeholder="Tell Us About Your Needs"
+          name="message"
+          formControlName="message"
+        ></textarea>
+        <span
+          class="alert"
+          *ngIf="!form.get('message')?.valid && form.get('message')?.touched"
+          >plz enter message</span
+        >
+        <input
+          type="submit"
+          value="Send"
+          class="submit"
+          (click)="sub()"
+          [disabled]="!form.valid"
+        />
+      </form>
+    </div>
+  </div>
+</div>

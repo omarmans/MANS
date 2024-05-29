@@ -1,0 +1,56 @@
+@import "../../../Shared_Style/variables.scss";
+
+.gallery {
+  @extend %shared-padding;
+  position: relative;
+  background-color: $section-background;
+  .container {
+    @extend %grid;
+    .box {
+      overflow: hidden;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 12px 20px 0px rgb(0 0 0 /13%),
+        0px 2px 4px 0px rgb(0 0 0 / 12%);
+
+      &::before {
+        //over lay
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 0px;
+        width: 0px;
+        background-color: rgb(255 255 255 /0.2);
+        opacity: 0;
+        z-index: 2;
+      }
+
+      img {
+        max-width: 100%;
+        height: 100%; //till no go out box
+        transition: $main-transition;
+      }
+      &:hover img {
+        transform: rotate(6deg) scale(1.1);
+      }
+
+      &:hover::before {
+        animation: flashing 0.7s;
+      }
+    }
+  }
+}
+
+@keyframes flashing {
+  0%,
+  40% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+  }
+}
