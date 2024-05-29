@@ -25,7 +25,7 @@ export class SkillComponent implements OnInit, AfterViewInit {
   constructor(private skill: SkillsService) {}
   ngOnInit(): void {
     this.Get_data_from_SERVICES();
-    this.From_ZERO_TO_TOP();
+    // this.From_ZERO_TO_TOP();
   }
   ngAfterViewInit(): void {
     this.From_ZERO_TO_TOP();

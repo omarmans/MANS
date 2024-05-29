@@ -17,8 +17,8 @@
           </li>
         </ul>
       </div>
-      <div class="preview">
-        <video id="myVideo" muted controls *ngIf="currentVideo">
+      <div class="preview" *ngIf="currentVideo">
+        <video id="myVideo" muted controls #myvido>
           <source [src]="currentVideo.src" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -27,5 +27,3 @@
     </div>
   </div>
 </div>
-
-<!-- [src]="'../../assets/Images/vid/' + currentVideo.title" -->

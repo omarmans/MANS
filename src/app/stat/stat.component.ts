@@ -24,7 +24,7 @@ export class StatComponent implements OnInit, AfterViewInit {
   }
   ngOnInit(): void {
     this.Get_data();
-    this.From_ZERO_TO_TOP();
+    // this.From_ZERO_TO_TOP();
   }
   Statistics: Statistics[] = [];
   @ViewChild('number') numbers!: ElementRef;
