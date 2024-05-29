@@ -1,0 +1,90 @@
+[
+  {
+    "img": "team-01.jpg",
+    "i": {
+      "facebook": "fab fa-facebook-f",
+      "linkedin": "fab fa-linkedin-in",
+      "youtube": "fab fa-youtube",
+      "website": "fas fa-globe"
+    },
+    "name": "Arrow",
+    "p": "Never Walk Alone"
+  },
+  {
+    "img": "team-02.jpg",
+    "i": {
+      "facebook": "fab fa-facebook-f",
+      "linkedin": "fab fa-linkedin-in",
+      "youtube": "fab fa-youtube",
+      "website": "fas fa-globe"
+    },
+    "name": "Shadow",
+    "p": "Master of Stealth"
+  },
+  {
+    "img": "team-03.jpg",
+    "i": {
+      "facebook": "fab fa-facebook-f",
+      "linkedin": "fab fa-linkedin-in",
+      "youtube": "fab fa-youtube",
+      "website": "fas fa-globe"
+    },
+    "name": "Phoenix",
+    "p": "Rise from Ashes"
+  },
+  {
+    "img": "team-04.jpg",
+    "i": {
+      "facebook": "fab fa-facebook-f",
+      "linkedin": "fab fa-linkedin-in",
+      "youtube": "fab fa-youtube",
+      "website": "fas fa-globe"
+    },
+    "name": "Blaze",
+    "p": "Ignite the Fight"
+  },
+  {
+    "img": "team-05.png",
+    "i": {
+      "facebook": "fab fa-facebook-f",
+      "linkedin": "fab fa-linkedin-in",
+      "youtube": "fab fa-youtube",
+      "website": "fas fa-globe"
+    },
+    "name": "Viper",
+    "p": "Silent but Deadly"
+  },
+  {
+    "img": "team-06.png",
+    "i": {
+      "facebook": "fab fa-facebook-f",
+      "linkedin": "fab fa-linkedin-in",
+      "youtube": "fab fa-youtube",
+      "website": "fas fa-globe"
+    },
+    "name": "Titan",
+    "p": "Strength and Honor"
+  },
+  {
+    "img": "team-07.jpg",
+    "i": {
+      "facebook": "fab fa-facebook-f",
+      "linkedin": "fab fa-linkedin-in",
+      "youtube": "fab fa-youtube",
+      "website": "fas fa-globe"
+    },
+    "name": "Falcon",
+    "p": "Eyes of the Sky"
+  },
+  {
+    "img": "team-08.jpg",
+    "i": {
+      "facebook": "fab fa-facebook-f",
+      "linkedin": "fab fa-linkedin-in",
+      "youtube": "fab fa-youtube",
+      "website": "fas fa-globe"
+    },
+    "name": "Lionheart",
+    "p": "Courage and Glory"
+  }
+]

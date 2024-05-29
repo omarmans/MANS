@@ -1,0 +1,22 @@
+{
+  "social_links": [
+    { "class": "face", "i": "fab fa-facebook-f" },
+    { "class": "twitter", "i": "fab fa-twitter" },
+    { "class": "youtube", "i": "fab fa-youtube" }
+  ],
+  "links": [
+    "Careers",
+    "Ubisoft Connect",
+    "Ubisoft.com",
+    "Support",
+    "Discover Ubisoft Connect"
+  ],
+  "gallery_images": [
+    "gallery-01.png",
+    "gallery-02.png",
+    "gallery-03.jpg",
+    "gallery-04.png",
+    "gallery-05.jpg",
+    "gallery-06.png"
+  ]
+}

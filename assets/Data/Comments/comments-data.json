@@ -1,0 +1,44 @@
+[
+  {
+    "img": "avatar-01.png",
+    "Title": "Full Stack Developer",
+    "h3": "Omar Mansor",
+    "stars": 5,
+    "p": "Great service! The team was very professional and the web application they developed for us exceeded our expectations in terms of performance and user experience."
+  },
+  {
+    "img": "avatar-02.png",
+    "Title": "Graphic Designer",
+    "h3": "Noor Youssef",
+    "stars": 4,
+    "p": "The designs provided were innovative and very attractive. Attention to detail was evident in every aspect of the project. Highly recommended!"
+  },
+  {
+    "img": "avatar-03.png",
+    "Title": "Digital Marketing Expert",
+    "h3": "Obaid Mohammed",
+    "stars": 5,
+    "p": "Helped us develop a highly effective marketing strategy that significantly increased our brand awareness. Expertise in digital marketing is top-notch."
+  },
+  {
+    "img": "avatar-04.png",
+    "Title": "Project Manager",
+    "h3": "Mahmoud Abdullah",
+    "stars": 3,
+    "p": "Project management skills are exceptional. Ensured that our project was completed on time and within budget. A true professional!"
+  },
+  {
+    "img": "avatar-05.png",
+    "Title": "Content Writer",
+    "h3": "Samy Ibrahim",
+    "stars": 4,
+    "p": "Content writing skills are amazing. The articles and marketing content created were engaging and helped us connect with our audience effectively."
+  },
+  {
+    "img": "avatar-06.png",
+    "Title": "IT Consultant",
+    "h3": "Hussein Ali",
+    "stars": 5,
+    "p": "Provided excellent IT consultancy services. Innovative solutions greatly improved our technical infrastructure and efficiency."
+  }
+]
