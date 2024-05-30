@@ -3,7 +3,7 @@ interface VIDS {
   duration: string;
   src?: string;
 }
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TopVidService } from './top-vid.service';
 
 @Component({
@@ -15,7 +15,6 @@ export class TopVidoesComponent implements OnInit {
   title = 'Videos';
   Videos: VIDS[] = [];
   currentVideo!: VIDS;
-  @ViewChild('myvido') videoElement!: ElementRef;
   constructor(private vid: TopVidService) {}
   ngOnInit(): void {
     this.get_data();
@@ -28,6 +27,7 @@ export class TopVidoesComponent implements OnInit {
         title: vid?.title,
         duration: '0:00', // Initialize duration string
         src: '../../assets/Images/vid/' + vid?.title, // Set video src
+        // src: '../../assets/Images/vid/' + vid?.title, // Set video src
       }));
       this.Videos.forEach((x: any, index) => {
         let videoElement = document.createElement('video');
@@ -50,21 +50,10 @@ export class TopVidoesComponent implements OnInit {
     //##################
   }
 
-  // throw_title(vid: VIDS) {
-  //   this.currentVideo = vid;
-  //   // const videoElement = document.getElementById('myVideo') as HTMLVideoElement;
-
-  //   this.videoElement.src = this.currentVideo?.src!;
-  //   this.videoElement.load(); // Reload the video
-  // }
   throw_title(vid: VIDS) {
     this.currentVideo = vid;
-    const videoSrc = this.currentVideo?.src;
-
-    if (videoSrc && this.videoElement && this.videoElement.nativeElement) {
-      const video: HTMLVideoElement = this.videoElement.nativeElement;
-      video.src = videoSrc;
-      video.load();
-    }
+    const videoElement = document.getElementById('myVideo') as HTMLVideoElement;
+    videoElement.src = this.currentVideo?.src!;
+    videoElement.load(); // Reload the video
   }
 }
