@@ -19,6 +19,7 @@
   overflow: hidden;
   background-color: white;
   transition: transform 0.5s, box-shadow 0.5s;
+  position: relative;
 }
 .article .container .box:hover {
   transform: translateY(-10px);

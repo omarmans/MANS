@@ -22,6 +22,9 @@
 }
 .header .container .main-nav {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 .header .container .main-nav > li > a {
   display: flex;

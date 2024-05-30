@@ -44,4 +44,10 @@
   outline: none;
   text-align: center;
   border: none;
+}
+
+@media (max-width: 767px) {
+  .item {
+    display: none;
+  }
 }/*# sourceMappingURL=show-item.component.css.map */

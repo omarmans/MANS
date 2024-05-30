@@ -100,11 +100,6 @@
 
 @media (min-width: 1200px) {
   .container .box:nth-of-type(2) {
-    top: -20px;
-  }
-}
-@media (max-width: 991px) {
-  .box-popular {
-    display: none;
+    top: -30px;
   }
 }/*# sourceMappingURL=pricing.component.css.map */

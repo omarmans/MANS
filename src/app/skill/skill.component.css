@@ -12,7 +12,7 @@
   flex: 1;
 }
 .our-skills .container .skills .skill {
-  transition: 5s;
+  transition: 8s;
 }
 .our-skills .container .skills .skill h3 {
   display: flex;
@@ -38,12 +38,6 @@
   left: 0;
   height: 100%;
   background-color: #2196f3;
-}
-
-.test {
-  height: 500px;
-  width: 100vh;
-  padding: 100px;
 }
 
 @media (max-width: 991px) {

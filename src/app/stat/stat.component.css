@@ -25,9 +25,10 @@
   gap: 20px;
 }
 .Statistics .container .box {
+  flex-basis: 25%;
   cursor: pointer;
   flex-direction: column;
-  padding: 60px;
+  padding: 30px;
   text-align: center;
   opacity: 0.8;
   background-color: white;
@@ -64,6 +65,7 @@
   text-align: center;
   font-size: 60px;
   font-weight: bold;
+  padding: 20px;
 }
 .Statistics .container .box p {
   color: #2196f3;

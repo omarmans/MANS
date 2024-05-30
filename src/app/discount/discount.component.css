@@ -3,6 +3,16 @@
   display: flex;
   flex-wrap: wrap;
 }
+.discount .alert {
+  display: block;
+  background-color: rgb(239, 143, 143);
+  color: white;
+  padding: 15px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 7px;
+  margin: 10px auto;
+}
 .discount .image {
   background-image: url("../../assets/Images/Discount/discount-background1.jpg");
   background-size: cover;
@@ -29,13 +39,13 @@
   width: 300px;
   max-width: 100%;
 }
-.discount .form {
+.discount .formContainer {
   flex-basis: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.discount .form .input {
+.discount .formContainer .input {
   outline: none;
   display: block;
   width: 100%;
@@ -48,16 +58,17 @@
   caret-color: #2196f3;
   transition: 0.2s;
 }
-.discount .form textarea.input {
+.discount .formContainer textarea.input {
   resize: none;
   height: 200px;
 }
-.discount .form .submit {
+.discount .formContainer .submit {
   display: block;
   margin: auto;
   width: 100%;
   padding: 15px;
   font-size: 20px;
+  margin-bottom: 10px;
   cursor: pointer;
   background-color: #81b1d8;
   color: white;
@@ -65,9 +76,13 @@
   border-radius: 5px;
   transition: 0.5s;
 }
-.discount .form .submit:hover {
+.discount .formContainer .submit:hover {
   background-color: #2196f3;
   letter-spacing: 5px;
+}
+.discount .formContainer .submit:disabled {
+  background-color: white;
+  border: none;
 }
 .discount .content {
   text-align: center;

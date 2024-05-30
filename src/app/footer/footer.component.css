@@ -101,20 +101,19 @@
 }
 
 .gallery-img {
-  margin-top: 10px;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-between;
   transition: 0.5s;
 }
 .gallery-img img {
+  margin: 10px;
   width: 78px;
   border: 3px solid white;
-  margin: 2px;
   max-height: 100%;
 }
 .gallery-img img:hover {
-  transform: scale(1.1) rotate(6deg);
+  transform: scale(1.1) rotate(5deg);
 }
 
 .copyright {
