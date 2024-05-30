@@ -26,13 +26,13 @@ export class TopVidoesComponent implements OnInit {
       this.Videos = vid.map((vid: any) => ({
         title: vid?.title,
         duration: '0:00', // Initialize duration string
-        src: '../../assets/Images/vid/' + vid?.title, // Set video src
+        src: 'assets/Images/vid/' + vid?.title, // Set video src
         // src: '../../assets/Images/vid/' + vid?.title, // Set video src
       }));
       this.Videos.forEach((x: any, index) => {
         let videoElement = document.createElement('video');
 
-        videoElement.src = '../../assets/Images/vid/' + x.title;
+        videoElement.src = 'assets/Images/vid/' + x.title;
 
         videoElement.addEventListener('loadedmetadata', () => {
           // Once metadata is loaded, update the duration for the corresponding video
